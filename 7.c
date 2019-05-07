@@ -11,9 +11,12 @@ typedef struct process
 } proc;
 
 proc arr[10];
+//fr is front re is rear tq is time quantum and fin is number of proccesses that have finished
 int np,fr=0,re=1,tq,fin=0;
 int burst[10];
+// for rr
 int circq[11];
+// for srtf
 int queue[100];
 
 void print()
