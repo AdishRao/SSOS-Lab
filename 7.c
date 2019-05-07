@@ -12,7 +12,6 @@ typedef struct process
 
 proc arr[10];
 int np,fr=0,re=1,tq,fin=0;
-int ct=0;
 int burst[10];
 int circq[11];
 int queue[100];
