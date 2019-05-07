@@ -5,10 +5,9 @@
 %}
 %token A B NUM NL
 %%
-ans:NUM NL T B NL{n=$1;}
+ans:NUM NL T B{n=$1;}
 T: A T	{c++;}
 | A {c++;}
-;
 %%
 main()
 {

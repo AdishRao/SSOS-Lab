@@ -39,21 +39,17 @@
    /* Put the tokens into the symbol table, so that GDB and other debuggers
       know about them.  */
    enum yytokentype {
-     NUM = 258,
-     PLUS = 259,
-     MINUS = 260,
-     MUL = 261,
-     DIV = 262,
-     NL = 263
+     A = 258,
+     B = 259,
+     NUM = 260,
+     NL = 261
    };
 #endif
 /* Tokens.  */
-#define NUM 258
-#define PLUS 259
-#define MINUS 260
-#define MUL 261
-#define DIV 262
-#define NL 263
+#define A 258
+#define B 259
+#define NUM 260
+#define NL 261
 
 
 

@@ -7,7 +7,6 @@ void main()
     char pos,opr,arg1,arg2;
     while( fscanf(ip," %c%c%c%c",&pos,&opr,&arg1,&arg2) != EOF )
     {
-        printf("OPR %c\n",opr);
         if(opr=='+')
         {
             fprintf(op,"MOV R0,%c \nADD R0,%c \nMOV T%c,R0\n",arg1,arg2,pos);
@@ -30,7 +29,7 @@ void main()
         }
         else if(opr=='=')
         {
-            fprintf(op,"MOV %c,%c\n",arg1,arg2);
+            fprintf(op,"MOV %c,T%c\n",arg1,arg2);
         }
     }            
 }

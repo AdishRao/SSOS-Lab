@@ -7,8 +7,7 @@
 %%
 [0-9]+	{ident++; printf("\nIdentifier: "); ECHO;}
 [\+|\-|\*|/|=]	{op++; printf("\nOperator: "); ECHO;}
-[.|\n]	{;}
-";"	{flag=1;} 
+.	{flag=1;}
 %%
 main()
 {
