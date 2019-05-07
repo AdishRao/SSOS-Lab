@@ -13,13 +13,14 @@ void calneed()
 			need[i][j] = max[i][j]-alloc[i][j];
 	}
 }
+
 void setfinished()
 {
 	int i;
 	for(i=0;i<np;i++)
 		finished[i]=0;
-
 }
+
 void calsafe()
 {
 	int flag = 0, i,j,k,zo,nzo,flag2;

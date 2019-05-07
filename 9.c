@@ -7,9 +7,9 @@ typedef struct linked
   struct linked* r;
 }link;
 
-link* head,*cur,*prev;
+link *head,*cur,*prev;
 int ch,nf,ip,pf=0;
-int *a;
+int *a; //int a[20];
 int *ff;
 
 void callfifo()
@@ -64,9 +64,9 @@ void calllru()
    link* temp=(link*) malloc (sizeof(link));
    temp->val=a[i];
    temp->r = NULL;
+
    cur = head;
    prev = head;
-
    while(cur!=NULL)
    {
     if(cur->val == a[i])
@@ -77,6 +77,7 @@ void calllru()
         prev->r=cur->r;
         cur->r=head;
         head = cur;
+        break;
       }    
     }
     prev = cur;
