@@ -22,7 +22,6 @@ void calfirst(int rno)
 {
     int i,j;
     for(j=0;j<2;j++) { 
-        if (rno ==0 && j==1) break;
         for(i=2;r[rno].rule[j][i]!='\0';i++)
         {   
             if(isterminal(r[rno].rule[j][i]))
@@ -44,27 +43,19 @@ void calfollow(int rno)
         r[rno].follow[++r[rno].fot]='$';
         r[rno].follow[r[rno].fot+1]='\0';
     }
-    for (k=0;k<2;k++) { 
-        
-        for(i=2;r[rno].rule[0][i]!='\0';i++)
+    for (k=0;k<2;k++) {  
+        for(i=2;r[rno].rule[k][i]!='\0';i++)
         {
-            if(r[rno].rule[0][i]=='A')
+            if(r[rno].rule[k][i]=='A')
                 j=0;
-            if(r[rno].rule[0][i]=='B')
+            if(r[rno].rule[k][i]=='B')
                 j=1;
-            if(r[rno].rule[0][i]=='A'||r[rno].rule[0][i]=='B')
+            if(r[rno].rule[k][i]=='A'||r[rno].rule[0][i]=='B')
             {
-                if(isterminal(r[rno].rule[k][i+1]) && r[rno].rule[k][i+1]!='3')
+                if(isterminal(r[rno].rule[k][i+1]))
                 {
                     r[j].follow[++r[j].fot]=r[rno].rule[k][i+1];
                 }
-                else
-                {
-                    if(r[rno].rule[k][i+1]=='A')
-                        strcat(r[j].follow,r[0].first);
-                    if(r[rno].rule[k][i+1]=='B')
-                        strcat(r[j].follow,r[1].first);                
-                }  
             }
         }
     }

@@ -40,7 +40,7 @@ void callfifo()
 }
 
 void initalizelink()
-{
+{ //Make into a for loop nf times 
   head = (link*) malloc (sizeof(link));
   head->val = -1;
   link *temp = (link*) malloc (sizeof(link));
