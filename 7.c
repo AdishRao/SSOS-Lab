@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-typedef struct process
+typedef struct process // 5 var
 {
     int pno;
     int at;
@@ -19,6 +19,7 @@ int circq[11];
 // for srtf
 int queue[100];
 
+//TAT = CT - AT    WT = TAT - BT
 void print()
 {
     int i;
@@ -54,7 +55,7 @@ void calprocseqrr()
         }
         if(dec==tq)
         {
-            if(arr[re].bt!=0)
+            if(arr[circq[re]].bt!=0)
             {
                 fr=(fr+1)%11;
                 circq[fr] = arr[circq[re]].pno;
